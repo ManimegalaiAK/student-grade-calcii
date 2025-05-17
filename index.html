@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+    <script>
+        var studentName = prompt("Enter your name:");
+        var studentId = parseInt(prompt("Enter your ID:"));
+        var tamil = parseInt(prompt("Enter Tamil marks:"));
+        var english = parseInt(prompt("Enter English marks:"));
+        var maths = parseInt(prompt("Enter Maths marks:"));
+        var science = parseInt(prompt("Enter Science marks:"));
+        var socialScience = parseInt(prompt("Enter Social Science marks:"));
+
+        var total = tamil + english + maths + science + socialScience;
+        var percentage = (total * 100) / 500;
+
+        document.write("Name: " + studentName + "<br>");
+        document.write("ID: " + studentId + "<br>");
+        document.write("Total Marks: " + total + "<br>");
+        document.write("Percentage: " + percentage.toFixed(2) + "%<br>");
+        
+        if (percentage >= 90) {
+            document.write("Grade: A");
+        } else if (percentage >= 80) {
+            document.write("Grade: B");
+        } else if (percentage >= 50) {
+            document.write("Grade: C");
+        } else if (percentage >= 30) {
+            document.write("Grade: D");
+        } else {
+            document.write("Grade: F (Fail)");
+        }
+    </script>
+</body>
+</html>
